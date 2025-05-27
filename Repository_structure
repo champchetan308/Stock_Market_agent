@@ -1,0 +1,38 @@
+tradeweaver_advanced_ai/
+├── main_agent/
+│   └── main_ai_agent.py              # Core logic for the main AI decision-making agent
+├── market_selection_agent/
+│   └── market_selector_ai_agent.py   # AI agent for selecting instruments
+├── news_agent/
+│   └── news_ai_agent.py              # AI agent for news sentiment and impact analysis
+├── strategy_agents/
+│   ├── base_ai_strategy_agent.py     # Base class for AI-driven strategy agents
+│   ├── rsi_ai_agent.py
+│   ├── macd_ai_agent.py
+│   ├── ema_ai_agent.py               # EMA Crossover AI agent
+│   ├── bollinger_bands_ai_agent.py
+│   ├── trend_ai_agent.py
+│   └── chart_pattern_ai_agent.py
+├── kite_integration/
+│   ├── kite_ticker_service.py        # Service to manage Kite WebSocket (conceptual, might be a long-running instance or robust CF)
+│   └── kite_utils.py                 # Utilities for Kite Connect API (order placement, LTP, etc.)
+├── common/
+│   ├── gemini_utils.py               # Utilities for Gemini API interaction (using gemini-1.5-pro-latest)
+│   ├── config_loader.py              # For loading configurations (e.g., from Firestore or env)
+│   └── utils.py                      # Other common utilities, constants
+├── backtesting/
+│   ├── historical_data_fetcher.py    # Fetches data from Kite for backtesting
+│   ├── data_loader_bt.py             # Loads historical data for backtest engine
+│   ├── portfolio_manager_bt.py       # Manages simulated portfolio during backtests
+│   ├── backtest_engine_ai.py         # Orchestrates AI agent backtesting
+│   ├── backtest_analysis.py          # Analyzes backtest results, esp. failed trades
+│   └── run_ai_backtest.py            # Example script to run a backtest
+├── tests/                              # Unit and integration tests (separate from backtesting)
+│   ├── test_main_agent.py
+│   ├── test_strategy_agents.py
+│   └── ...
+├── .env.example                        # Example environment variables for local development
+├── requirements.txt                    # Main project dependencies
+├── deploy_scripts/                     # (Optional) Scripts for deploying to GCP
+│   └── deploy_cloud_functions.sh
+└── README.md                           # This document
