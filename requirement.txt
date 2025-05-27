@@ -1,0 +1,33 @@
+# TradeWeaver Project Requirements
+
+# --- Google Cloud & AI ---
+google-cloud-pubsub>=2.13.0,<3.0.0
+google-cloud-firestore>=2.11.0,<3.0.0
+google-cloud-secretmanager>=2.16.0,<3.0.0
+google-generativeai>=0.5.0,<0.6.0 # For Gemini API (genai SDK)
+# If using Vertex AI SDK directly for Gemini:
+# google-cloud-aiplatform>=1.38.0,<2.0.0 
+
+# --- Kite Connect ---
+kiteconnect>=3.9.0,<4.0.0 # Or latest stable version
+
+# --- Data Handling & Technical Analysis ---
+pandas>=1.5.0,<2.3.0 # Using <2.3 for broader compatibility if needed
+numpy>=1.23.0,<2.0.0
+pandas-ta>=0.3.14,<0.4.0 # For technical indicators (optional if AI does all from raw)
+
+# --- Timezone Handling ---
+pytz>=2023.3
+
+# --- Configuration File Handling (Optional, if using YAML for local configs) ---
+PyYAML>=6.0,<7.0
+
+# --- HTTP Requests (e.g., for News API) ---
+requests>=2.28.0,<3.0.0
+
+# --- For Backtesting Visualization (Optional) ---
+# matplotlib>=3.6.0,<4.0.0
+
+# Note: Pin versions for stable builds. Check for latest compatible versions.
+# Some libraries like google-cloud-* might have transitive dependencies.
+# Install using: pip install -r requirements.txt
